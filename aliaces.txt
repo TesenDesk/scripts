@@ -1,0 +1,12 @@
+alias config="vim ~/.zshrc; source ~/.zshrc"
+alias reload="clear; source ~/.zshrc"
+alias vglocation="echo 'Found valgrind location at /Users/jjerde/valgrind/bin/valgrind'"
+alias help="echo 'Available custom commands:\nhelp - display this text\nterm-config - open config file\nreload - reload config and console\nds_remover - delete all .DS_Store files in your location adn subdirs\nvglocation - search valgrind binary location\nps_gen - push-swap random numbers generator\nпше - make git stash and git stash clear\ncd.. - fix for <cd ..>\n'"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cd..="cd .."
+alias пшесдуфк="git stash; git stash clear"
+alias ds_remover="sh ~/is42/clear_fucken_DSstore.sh"
+alias ps_gen="sh ~/is42/08_push_swap/ps/generator.sh"
+sh ~/startup.sh
+alias valgrind="$HOME/valgrind/bin/valgrind"
