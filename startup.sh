@@ -1,6 +1,6 @@
-# memory-monitoring by jjerde. v 3.1.0 | Jul 26 2020 | School 21 Moscow, Russia
-memorylimit=5
-memoryalert=4
+# memory-monitoring by jjerde. v 3.2.0 | Sep 05 2020 | School 21 Moscow, Russia
+memorylimit=4
+memoryalert=3
 username=`whoami`
 echo "\033[1;33mNow running new copy of shell. Login in..."
 mem=`du -sh ~/ grep G 2>/dev/null | cut -c -4`
@@ -15,7 +15,7 @@ then echo "\033[1;33m[ \033[5m⚠️\033[0m  \033[1;31mWarning!\033[1;33m] \033[
 	read -s -n 1 answer
 	if [ $answer = "Y" ] || [ $answer = "y" ]
 	then echo "\033[1;37mRunning...\033[0m"
-		rm -rf ~/Library/*42_cache*
+		rm -rf ~/Library/Caches
 		mem=`du -sh ~/ grep G 2>/dev/null | cut -c -4`
 		memonly=`echo $mem | cut -c 1`
 		if [ "$memonly" -lt "$memoryalert" ]
